@@ -1,0 +1,11 @@
+{% load static %}
+<div class="d-flex">
+    <div>
+        <b class="h5 text-warning" >{{ user.name }}</b>
+        <div class="d-flex">
+            <a href="/settings/" class="text-warning">Настройки</a>
+            <a class="ms-2 text-warning" href="#">Выйти</a>
+        </div>
+    </div>
+    <img src="{% static 'img/аватар.jpg' %}" class="img-fluid ProfileImg ms-3" alt="Фотография профиля">
+</div>

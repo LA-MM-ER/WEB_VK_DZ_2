@@ -1,0 +1,38 @@
+{% extends 'layouts/header_and_tags.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="d-flex">
+    <h2>Последние вопросы</h2>
+    <a href="#" class="ms-4 mt-2 text-danger">Самые актуальные</a>
+</div><br>
+
+{% for i in items %}
+
+<div class="row"> <!-- Карточка вопроса -->
+    <div class="col-md-11 border  bg-light">
+        <div class="row p-4">
+            <div class="col-md-2"> <!-- Колонка для лайков и фотки -->
+                <img src="{% static 'img/аватар.jpg' %}" alt="Author's photo" class="img-fluid ProfileImg ms-2">
+                <br><br>
+                <input type="number" name="likes" id="likes_counter" value={{ i }} style="max-width: 50%">
+            </div>
+
+            <div class="col-md-10"> <!-- Колонка для заголовка, описания, тегов и количества ответов -->
+                <a href="/question_page/{{ i }}" class="text-warning"><h3>Как жить дальше?</h3></a>
+                <p>Что вершит судьбу человечества в этом мире? Некое незримое существо или закон, подобно Длани Господней парящей над миром? По крайне мере истинно то, что человек не властен даже над своей волей.</p>
+                <div class="row"> <!-- Строка с количеством ответов и тегами -->
+                    <div class="col-md-4">Ответы: 4</div>
+                    <div class="col-md-8">Тэги: <a href="#" class="m-4">Игры</a><a href="#">ПК</a></div>
+                </div>
+            </div>
+        </div>
+        <br>
+    </div>
+</div>
+<br>
+
+{% endfor %}
+
+{% endblock %}

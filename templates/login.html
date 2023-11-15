@@ -1,0 +1,17 @@
+{% extends 'layouts/header_and_tags.html' %}
+{% load static %}
+
+{% block content %}
+
+<h3>Вход</h3>
+
+<form action="#">
+    <br>
+    <input type="text" class="form-control" id="inputTitle" aria-describedby="emailHelp" placeholder="Логин">
+    <br>
+    <input type="password" class="form-control" id="inputTags" aria-describedby="emailHelp" placeholder="Пароль">
+    <br>
+    <button class="btn btn-outline-primary">Войти</button>
+</form>
+
+{% endblock %}

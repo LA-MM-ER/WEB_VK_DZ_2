@@ -1,0 +1,30 @@
+{% extends 'layouts/header_and_tags.html' %}
+{% load static %}
+
+{% block content %}
+
+<h3>Настройки</h3>
+<br>
+<form action="#">
+    <label>Ник</label>
+    <div class="input-group">
+        <input type="text" class="form-control" id="inlineFormInputGroup" value="{{ user.name }}">
+    </div>
+    <br>
+    <div class="form-group">
+        <label>Логин (почта)</label>
+        <input type="text" class="form-control" value="{{ user.login }}">
+    </div>
+    <br>
+    <div class="form-file">
+        <label>Сменить аватар</label><br>
+        <input type="file" class="form-file-input" id="customFile"><br><br>
+        <img src="{% static 'img/аватар.jpg' %}" class="img-fluid SettingsProfileImg" alt="Аватар"><br><br>
+    </div>
+    <br>
+    <div class="d-grid gap-2 col-6 mx-auto">
+        <button class="btn btn-outline-dark">Сохранить</button>
+    </div>
+</form>
+
+{% endblock %}

@@ -1,0 +1,29 @@
+{% extends 'layouts/header_and_tags.html' %}
+{% load static %}
+
+{% block content %}
+
+<h3>Задать вопрос</h3>
+<br>
+<form action="#">
+    <div class="form-group">
+        <label for="inputTitle">Название</label>
+        <input type="text" class="form-control" id="inputTitle" aria-describedby="emailHelp" placeholder="Название вопроса">
+    </div>
+    <br>
+    <div class="form-group">
+        <label for="inputText">Текст</label>
+        <textarea class="form-control" id="inputText" placeholder="Описание"></textarea>
+    </div>
+    <br>
+    <div class="form-group">
+        <label for="inputTags">Тэги</label>
+        <input type="text" class="form-control" id="inputTags" aria-describedby="emailHelp" placeholder="Тэги">
+    </div>
+    <br>
+    <div class="d-grid gap-2 col-6 mx-auto">
+        <button class="btn btn-outline-success my-2 my-sm-0">Спросить</button>
+    </div>
+</form>
+
+{% endblock %}

@@ -1,0 +1,39 @@
+{% extends 'layouts/header_and_tags.html' %}
+{% load static %}
+
+{% block content %}
+
+<h3>Регистрация</h3>
+<br>
+<form action="#">
+    <label>Ник</label>
+    <div class="input-group">
+        <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="George">
+    </div>
+    <br>
+    <div class="form-group">
+        <label>Логин (почта)</label>
+        <input type="text" class="form-control" placeholder="cheater@gmail.com">
+    </div>
+    <br>
+    <div class="form-group">
+        <label>Пароль</label>
+        <input type="password" class="form-control" placeholder="************">
+    </div>
+    <br>
+    <div class="form-group">
+        <label>Повторите пароль</label>
+        <input type="password" class="form-control" placeholder="************">
+    </div>
+    <br>
+    <div class="form-file">
+        <label>Загрузить аватар</label><br>
+        <input type="file" class="form-file-input" id="customFile">
+    </div>
+    <br>
+    <div class="d-grid gap-2 col-6 mx-auto">
+        <button class="btn btn-outline-dark">Регистрация</button>
+    </div>
+</form>
+
+{% endblock %}
